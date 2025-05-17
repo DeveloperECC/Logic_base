@@ -69,8 +69,7 @@ roll: 'usuario',
 
 if (errorInsert) {
 errorElement.textContent = 'Usuario creado pero error en base de datos:' + errorInsert.message;
-} else {
-mostrarLogin(); // Redirige al login después del registro exitoso
+} else {mostrarLogin(); // Redirige al login después del registro exitoso
 }
 });
 

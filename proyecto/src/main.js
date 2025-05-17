@@ -1,13 +1,15 @@
 import { mostrarLogin } from "./login.js";
 import { supabase } from "./supabase.js";
-import { mostrarRegistro } from "./registro.js";
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarLogin();
+});
 
 document.addEventListener('DOMContentLoaded', async () => {
 const user = await validarSesion();
 if (!user) {
 document.querySelector(".c-nav").innerHTML = ""
 document.querySelector("#app").innerHTML = "no login"
-  mostrarLogin()("no login")
+mostrarLogin()("no login")
 } else {
 console.log('Usuario logueado:', user.email);
 General(); // Aquí pones tu lógica para cargar contenido
@@ -302,4 +304,4 @@ window.mostrarFavoritos = mostrarFavoritos;
 window.mostrarAleatorio = mostrarAleatorio;
 window.mostrarAlbum = mostrarAlbum;
 
-setupCounter(document.querySelector('#counter'))
+
